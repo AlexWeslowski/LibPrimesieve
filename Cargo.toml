@@ -1,13 +1,15 @@
 [package]
 name = "libprimesieve"
-version = "1.0.0"
+version = "0.2.0"
 authors = ["Alex Weslowski"]
 edition = "2021"
 build = "src/build.rs"
+description = "Access to the C function primesieve_generate_primes"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/AlexWeslowski/LibPrimesieve"
 
 [dependencies]
-#libc = "0.2.158"
-libc = "0.2"
+libc = "0.2.158"
 
 [lib]
 name = "libprimesieve"
@@ -18,3 +20,4 @@ crate-type = ["lib"]   # The crate types to generate.
 [[bin]]
 name = "primesieve"
 path = "src/main.rs"
+
