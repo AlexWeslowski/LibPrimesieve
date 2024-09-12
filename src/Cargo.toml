@@ -1,0 +1,21 @@
+[package]
+name = "libprimesieve"
+version = "1.0.0"
+authors = ["Alex Weslowski"]
+edition = "2021"
+build = "src/build.rs"
+
+[dependencies]
+#libc = "0.2.158"
+libc = "0.2"
+
+[lib]
+name = "libprimesieve"
+path = "src/lib.rs"
+edition = "2021"
+crate-type = ["lib"]   # The crate types to generate.
+
+[[bin]]
+name = "primesieve"
+path = "src/main.rs"
+
